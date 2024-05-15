@@ -1,0 +1,21 @@
+html{
+    font-size: 17px;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+
+ul{
+    font-size: 20px;
+}
+
+li{
+    font-size : 2em;
+}
+
+li div {
+    font-size: 2em;
+}
