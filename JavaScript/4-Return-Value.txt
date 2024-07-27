@@ -1,0 +1,2 @@
+1. Promise.then()의 return
+1-1. 해당 구문의 return 값은 then()의 return 값을 받는다. 즉, then의 결과값이 담긴 Promise가 반환된다.

@@ -1,0 +1,21 @@
+1. HTML5
+1-1. 웹 최신 표준으로 웹 페이지와 웹 에플리케이션을 작성하는 데 사용되는 마크업 언어의 최신 버전
+
+
+2. 특징
+2-1. 새로운 HTML 시멘트 요소 (header, section, footer, article..)
+2-2. <audio>, <video> 태그를 통해 플러그인 없이 오디오와 비디오를 쉽게 삽입하고 제어가능
+2-3. <canvas> 요소를 통해 스크립트를 사용해 즉시 비트맵 이미지를 그릴 수 있다.
+2-4. SVG(Scalable Vector Graphics)를 통해 벡터 그래픽을 지원한다.
+2-5. 새로운 입력 타입(email, date, url 등)과 속성(placeholder, required 등)이 추가
+2-6. WebSocket, Web Workers, Local Storage, Geolocation API, Offline Web Applications 등 다양한 API가 포함되어 
+웹 애플리케이션 개발을 더욱 강력하고 유연하게 만들었다.
+
+
+3. 2-6의 설명
+3-1. Web Workers: 백그라운드 스레드에서 JavaScript 코드를 실행할 수 있도록 하는 API.
+3-2. Local Storage: 브라우저 내에 데이터를 저장할 수 있는 API.
+3-3. Geolocation API: 사용자의 위치 정보를 얻을 수 있는 API.
+3-4. Offline Web Applications: 애플리케이션이 오프라인 상태에서도 작동할 수 있도록 지원하는 API.
+3-5. WebSocket: 클라이언트와 서버 간의 실시간 양방향 통신을 위한 프로토콜.
+

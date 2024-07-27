@@ -1,0 +1,65 @@
+1. Npm이란?
+=> Node Package Manager는 JS 언어를 사용하는 개발자들이 패키지와 모듈을 쉽게 관리하고 배포할 수 있도록 도와주는 패키지 관리자
+=> Npm은 Node.js와 함께 설치된다. 
+
+
+2. 주요 기능과 특징
+2-1. 패키지 관리
+=> 다양한 JavaScript 라이브러리와 모듈을 설치, 업데이트, 삭제할 수 있습니다. 
+2-2. 공유 및 재사용
+=> 자신이 만든 패키지를 Npm 저장소에 업로드하여 다른 개발자들과 공유할 수 있습니다.
+2-3. 스크립트 실행
+=> 프로젝트 내에서 자주 사용하는 명령어를 정의하고 실행할 수 있는 스크립트 기능을 제공합니다.
+2-4. 버전 관리
+=> 각 패키지의 버전을 관리하여 프로젝트가 의존하는 패키지의 특정 버전을 고정하거나 업데이트할 수 있도록 도와줍니다.
+
+
+3. 기본적인 명령어
+npm init: 새로운 NPM 패키지를 초기화하고 package.json 파일을 생성합니다.
+npm install <패키지 이름>: 특정 패키지를 설치합니다.
+(
+    1. npm install : dependencies, devDependencies, optionalDependencies에 명시한 패키지 설치
+    2. npm install <package> : 명시된 package 설치하고 dependencies에 기록
+    3. npm install <package> --save : 2와 같다.
+    4. npm install <package> --save-dev : 명시된 패키지는 개발 환경에서만 필요한 패키지로 설치하고 devDependencies에 기록
+    5. npm install --save-optional <package> : 해당 패키지는 선택적이고, 설치 실패에 전체 설치 영향 x, optionalDependencies 기록
+    6. npm install <package> --no-save : 명시된 패키지를 설치하지만, package.json 파일에는 추가하지 않는다.
+)
+npm install: package.json 파일에 명시된 모든 종속성을 설치합니다.
+npm update: 설치된 모든 패키지를 최신 버전으로 업데이트합니다.
+npm uninstall <패키지 이름>: 특정 패키지를 삭제합니다.
+npm publish: 자신이 만든 패키지를 Npm 저장소에 배포합니다.
+
+
+4. package.json
+=> npm 패키지를 정의하고 관리하는 데 사용되는 주요 파일입니다.
+
+4-1. 주요 속성
+1. name : 패키지의 이름을 정의합니다.
+2. version : 패키지의 버전을 정의합니다.
+3. description : 패키지에 대한 간단한 설명을 제공합니다.
+4. main : 패키지의 진입점 파일을 지정합니다. 주로 Node.js 프로젝트에서 사용됩니다.
+5. scripts : 자주 사용하는 명령어를 정의합니다. 이 명령어들은 npm run <script-name>으로 실행할 수 있습니다.
+6. dependencies : 패키지가 의존하는 패키지 목록을 정의합니다. 이 패키지들은 npm install 명령어로 설치됩니다.
+7. devDependencies : 개발 환경에서만 필요한 패키지 목록을 정의합니다. 예를 들어, 테스트 프레임워크나 
+빌드 도구 등이 여기에 포함됩니다.
+8. repository : 패키지의 소스 코드 저장소를 정의합니다.
+etc...
+
+
+5. package-lock.json
+=> NPM 프로젝트에서 패키지 관리와 버전 관리를 위한 중요한 파일입니다.
+=> 정확한 의존성 트리를 기록하여 일관된 환경을 보장하는 데 도움을 줍니다.
+
+5-1. 역할
+1. 정확한 의존성 버전 기록 : dependencies, devDependencies, optionalDependencies 등 모든 의존성의 정확한 버전과 
+그 의존성 트리를 기록합니다.
+
+2. 의존성 트리 유지 : 프로젝트가 의존하는 모든 패키지와 이들 패키지의 의존성을 트리 구조로 기록합니다.
+3. 빠른 설치 :npm install 명령어가 패키지의 정확한 버전과 의존성 트리를 빠르게 확인할 수 있으므로, 패키지 설치가 더 신속하게 진행됩니다.
+4. 일관된 환경 보장
+
+
+
+** 정리
+1. NPM은 NodeJS와 함께 설치되지만 Npm은 패키지 매니저일 뿐이다. => 서버 사이드 라이브러리만 처리하는 것은 아니다.
