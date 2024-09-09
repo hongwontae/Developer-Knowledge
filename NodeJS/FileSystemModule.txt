@@ -1,0 +1,39 @@
+1. fs 모듈이란?
+=> 파일을 읽고, 쓰고, 수정하고, 삭제하는 등 다양한 파일 시스템 작업을 수행하는 모듈이다.
+
+
+2. 파일 읽기
+2-1. fs.readFile('path', options(생략 가능), callback)
+=> 비동기 방식이고 options는 생략할 수 있고 인코딩 방식을 지정할 수 있다.(지정x => buffer)
+=> callback 함수의 첫 번쨰 인자는 err, 두 번쨰 인자는 result이다.
+2-2. fs.readFileSync('path', options)
+=> 동기 방식이고 해당 함수 호출 결과의 리턴값이 read한 값이다./ try-catch을 통해 에러를 잡는다.
+
+
+3. 파일 쓰기
+3-1. fs.writeFile('path', data, options, callback)
+=> 비동기 방식이고 data는 쓸 데이터(문자열, 버퍼, 객체..) options는 생략 가능(인코딩, 기본값은 utf8)
+=> callback은 파일 작업이 끝난 후 실행되고 err 객체를 인수로 받는다.
+3-2. fs.writeFileSync('path', data, options)
+=> 동기 방식이고 options을 통해 인코딩방식을 지정한다.(utf8이 기본 value)
+=> data는 3-1과 같다.
+
+
+4. 파일 추가
+4-1. fs.appendFile('path', data, options, callback)
+=> 비동기 방식, data는 문자열 or 버퍼 객체, options 생략 가능, callback => 작업이 완료된 뒤 수행하는 함수(err를 받는다.)
+4-2. fs.appendFileSync('path' data, options)
+=> 동기 방식
+
+
+5. 파일 삭제
+5-1. fs.unlink('path', callback)
+=> 비동기 방식, 작업이 완료된 뒤 callback 실행(인자에 err 존재)
+5-2. fs.unlinkSync('path')
+=> 동기 방식
+
+
+6. 디렉토리 만들기
+6-1. fs.mkdir('path', callback)
+6-2. fs.mkdirSync('path')
+

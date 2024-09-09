@@ -1,0 +1,19 @@
+1. Buffer 객체
+=> Node.js 환경에서 바이너리 데이터를 다룰 떄 사용한다.
+=> 버퍼는 유사배열객체이다. (index, length 사용가능)
+
+
+2. 메서드
+2-1. Buffer.from(arr(obj, string)) 
+=> Buffer을 생성할 수 있다.
+=> 문자열의 경우 encoding default는 utf8이고 배열일 떄는 인코딩 방식이 적용되지 않는다.
+=> 객체의 경우 Buffer화 할 수 없다. => 하고 싶다면 JSON 형식으로 바꾸면 가능하다.
+
+2-2. const binaryData = Buffer.from()을 통해 버퍼 데이터를 생성하고 값에 할당하면 toString()을 통해 값을 표현할 수 있다.
+binaryData.toString('utf8'), console.log(buf.toString('hex'));....
+
+2-3. Buffer.concat([buf1, buf2]);
+=> Buffer을 합치는 메서드이다. 배열 안에 두 개의 버퍼를 넣으면 된다.
+
+
+

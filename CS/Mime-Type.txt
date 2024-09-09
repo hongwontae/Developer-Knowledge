@@ -1,0 +1,44 @@
+1. Mime 타입이란?
+=> 웹에서 데이터의 형식을 정의하는 문자열입니다.
+=> 브라우저와 서버가 데이터의 종류를 이해하고 적절히 처리할 수 있도록 돕습니다.
+
+
+2. Mime 타입의 구조
+2-1. 주 미디어 타입 (Primary Media Type) : 데이터의 일반적인 형식을 나타냅니다. (text, image, video, application)
+2-2. 서브 미디어 타입 (Submedia Type) : 주 미디어 타입을 세부적으로 정의합니다. (text/html, text/plain, application/json..)
+
+
+3. 주요 Mime 타입
+3-1. 텍스트 (text)
+text/plain: 일반 텍스트 데이터.
+text/html: HTML 문서.
+text/css: CSS 스타일 시트.
+text/javascript: 자바스크립트 코드.
+
+3-2. 이미지 (image)
+image/jpeg: JPEG 이미지.
+image/png: PNG 이미지.
+image/gif: GIF 이미지.
+image/svg+xml: SVG 벡터 그래픽스.
+
+3-3. 오디오 (audio)
+audio/mpeg: MP3 오디오.
+audio/wav: WAV 오디오.
+audio/ogg: OGG 오디오.
+
+3-4.비디오 (video)
+video/mp4: MP4 비디오.
+video/webm: WebM 비디오.
+video/ogg: OGG 비디오.
+
+3-5. 응용 프로그램 (application)
+application/json: JSON 데이터.
+application/xml: XML 데이터.
+application/octet-stream: 일반 바이너리 데이터. 이 MIME 타입은 데이터 형식이 명확하지 않을 때 사용됩니다.
+
+
+4. Mime 타입 사용
+4-1. 웹 요청 및 응답 : C=>S, Accept 헤더에 MIME 타입을 포함/ S=>C, Content-Type 헤더를 통해 응답 데이터의 MIME 타입
+4-2. 파일 업로드 및 다운로드 : HTML의 <input type="file"> Mime 타입 형식이 지정된다./ S=>C, Mime 타입 내려준다.
+4-3. Blob 설정 객체를 통해 Mime 타입 지정가능
+

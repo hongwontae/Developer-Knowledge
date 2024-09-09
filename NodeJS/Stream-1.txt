@@ -1,0 +1,53 @@
+1. Stream이란?
+=> 데이터를 연속적으로 읽거나 쓸 수 있는 추상화된 객체이다.
+=> 파일 시스템, 네트워크 요청 등의 작업에서 스트림을 사용한다.
+=> Stream 로직을 사용하면 메모리 사용 최적화, 성능 개선, 대용량 파일 처리의 이점을 가질 수 있다.
+=> Stream 객체라는 것은 fs.create(write)Stream을 호출하여 할당한 변수를 의미한다.
+=> Stream 로직은 (이벤트 기반이기 때문이다.) 비동기로 실행된다.
+
+
+2. Chunk?
+2-1. 데이터의 작은 부분을 의미한다. (책이 데이터라면 책의 한 페이지를 청크라고 할 수 있다.)
+2-2. fs.createRead(write)Stream으로 생성하여 만든 객체의 이벤트는 콜백함수에서 chunk를 받는다.
+2-3. chunk는 텍스트 데이터 아니면 Buffer 객체로 변환된다.
+
+
+3. fs.createReadStream
+3-1. fs 모듈에서 제공하는 메서드, 파일에서 데이터를 읽기위한 Readable Stream을 생성
+3-2. chunk를 통해 나누어서 읽을 수 있다.
+3-3. fs.createReadStream('path', options);
+(options 객체를 통해 인코딩 방식(default는 null), highwaterMart : 스트림이 한번에 읽는 청크 크기 지정)
+3-4. 3으로 생성된 객체는 이벤트 지원한다. data, end, error
+
+3-5. readStream.on('data', ()=>{})
+=> 데이터를 읽을 떄마다 발생하는 이벤트
+=> chunk 단위로 데이터를 읽기 때문에 청크 사이즈마다 이벤트 발생
+
+3-6. readStream.on('end', ()=>{})
+=> 스트림이 파일 끝에 도달했을 떄 callback 실행
+
+3-7. readStream.on('err', ()=>{})
+=> 스트림에서 에러가 발생했을 떄 callback 실행
+
+
+4. fs.createWriteStream
+4-1. fs 모듈에서 제공하는 메서드, 파일에 데이터를 쓰기 위한 Writable Stream을 생성
+4-2. chunk를 통해 파일에 데이터를 쓴다.
+4-3. fs.createWriteStream('path', options)
+(options 객체를 통해 flags, encoding, mode, highWaterMark)
+
+4-4. write 메서드 : 스트림에 데이터를 쓰는 데 사용된다. 비동기 메서드, 데이터를 다 쓴 이후에도 스트림을 열어두고 데이터를 받을
+준비를 한다. writeStream.write(data, encoding, (err)=>{});
+4-5. end 메서드 : 쓰기 작업을 종료하는 메서드, 종료 데이터 쓰기(선택적으로 마지막에 쓸 데이터를 인자로 받을 수 있다.)
+finish 이벤트를 트리거한다.
+
+
+4-6. finish 이벤트 : end 호출 후에 callback 실행
+4-7. error 이벤트 : 쓰기 스트림 중 error가 발생하면 callback 실행
+4-8. drain 이벤트 : 하나의 chunk를 사용하고 다음 chunk를 쓰기 전에 발생되는 이벤트
+
+
+
+
+
+
