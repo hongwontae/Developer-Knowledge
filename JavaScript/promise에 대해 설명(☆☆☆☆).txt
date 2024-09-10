@@ -1,0 +1,46 @@
+1. promise란?
+=> JS에서 비동기 작업을 처리하기 위한 객체이고 콜백 함수의 중첩 문제를 해결할 수 있습니다.
+=> new Promise를 호출하고 콜백 함수를 호출해서 인자로 resolve와 reject를 통해 fulfilled, rejected 상태를 제어합니다.
+=> fulfilled 상태가 되면 then을 사용해서 후속처리를 하고 rejected 상태가 되면 catch를 사용해서 후속처리를 합니다.
+=> 성공이든 실패를 하든 어떠한 작업을 한 번 하고 싶다면 finally 메서를 사용합니다.
+
+2. Promise 3가지 상태
+2-1. Pending : 대기
+2-2. Fulfilled : 성공
+2-3. rejected : 실패
+
+
+3. promise 메서드
+3-1. Promise.all()
+=> 여러 개의 Promise를 병렬로 처리하고, 모든 promise가 이행될 떄까지 기다린 후, 결과를 배열로 반환한다.
+=> 모든 Promise가 fulfilled 상태가 되어야 최종 결과 반환, 하나라도 rejected 상태라면 전체는 rejected 상태가 되고
+에러가 던져진다.
+
+3-2. Promise.allSettled
+=> 병렬처리, 모든 promise 이행 or 거부될 때까지 기다린다.
+=> 어떤 결과가 나오든 반환한다.
+
+3-3. Promise.any
+=> 병렬 처리, 첫 번쨰로 성공한 Promise 결과 반환
+=> 모든 Promise가 실패했을시에만 AggregateError 반환
+
+3-4. Promise.race
+=> 병렬 처리, 가장 먼저 이행되거나 거부된 Promise 결과 반환
+
+
+면접 질문
+promise에 대해서 설명해보세요
+=> JS의 비동기 작업을 처리하기 위한 객체이고 콜백지옥을 해결하기 위한 사용됩니다.
+=> promise는 3가지 상태를 가집니다. 상태는 대기, 성공, 실패로 나뉘고 상태에 따라 then 메서드, catch 메서드로 결과를 
+처리할 수 있습니다.
+=> promise로 비동기 작업을 처리하기 위해 new Promise를 호출하고 콜백 함수를 받고 인자에 resolve, reject를 받습니다.
+(new Promise가 호출되는 순간 내부 콜백 함수가 실행됩니다.)
+=> resolve는 성공, reject는 실패, 완료되지 않았다면 pending 상태입니다.
+=> 성공했다면 then, 실패 했다면 catch 메서드로 처리합니다.
+=> then을 통해 체이닝을 이어나갈 수 있습니다. then의 return 값이 다음 then의 인자로 들어가고 원하는 만큼 이어나갈 수 있
+습니다.
+
+
+면접 질문
+promise와 콜백를 비교해주세요
+=> 

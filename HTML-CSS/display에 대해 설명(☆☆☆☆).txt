@@ -1,0 +1,12 @@
+1. display
+=> HTML 요소가 어떻게 보일지를 결정하는 속성입니다.
+
+
+2. 주요 값
+2-1. block
+2-2. inline
+2-3. inline-block
+2-4. none
+2-5. flex
+2-6. grid
+2-7. inline-flex, inline-grid

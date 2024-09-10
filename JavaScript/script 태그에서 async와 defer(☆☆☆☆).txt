@@ -1,0 +1,15 @@
+1. script 태그의 defer
+=> html를 파싱하다가 script 태그를 만나면 백그라운드에서 비동기적으로 다운로드합니다.
+=> DOM이 완전히 준비된 이후에 다운받은 script를 실행합니다.
+
+
+2. script 태그의 async
+=> 스크립트 다운로드와 html 파싱이 동시에 이루어지고 script가 다운이 완료되면 html 파싱이 멈추고 script가 실행됩니다.
+=> async 스크립트가 여러개 존재할 경우 다운로드가 먼저 완료된 순서대로 실행합니다.
+
+
+면접 질문 defer와 async의 차이점
+=> defer와 async 모두 html이 파싱되면서 비동기적으로 script가 다운로드 됩니다.
+=> 그러나 defer는 script 다운이 완료되었더라도 dom이 완전히 준비될 떄까지 기다리고 이 후에 실행합니다.
+=> async는 script 다운이 완료되면 html 파싱이 멈추고 script를 실행시킵니다.
+=> 순차적인 실행이 필요하다면 defer, 순차적 실행이 의미없다면 async를 사용하면 됩니다.
