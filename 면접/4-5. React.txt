@@ -1,0 +1,49 @@
+1. 리액트 관련 패키지 중에 제일 좋다고 생각한 것은 무엇인가요?
+=> tailwind CSS, React-Router, React-Query가 좋다고 생각합니다.
+=> tailwind는 컴포넌트 내부에서 CSS를 사용하여 빠른 피드백이 가능해서 좋았습니다.
+=> React-Router는 클라이언트 사이드 라우팅을 손쉽게 구현할 수 있어 페이지를 구현할 떄 좋았습니다.
+=> React-Query는 fetching, caching..등을 사용하여 비동기 데이터를 쉽게 확장성 있게 다룰 수 있어 좋았습니다.
+
+
+2. 리액트의 렌더링 성능 향상을 위해 어떻게 해야 하나요?
+=> React.memo, useCallback, useMemo을 적절하게 사용하고
+=> 동적 데이터를 표현할 떄 올바른 key props를 줘야 합니다.
+=> 또한 React.Suspense, React.Lazy를 활용하여 컴포넌트를 지연 로딩합니다.
+
+
+3. CSS in JS를 사용해 본 적이 있나요? 있다면 소감을 말해주세요.
+=> tailwind와 styled-components를 사용해봤습니다.
+=> 동적인 스타일링이 가능하고, 스타일을 JS 파일이나 컴포넌트 내부에서 사용하여 유지보수가 용이 했습니다.
+=> 프로젝트가 커지면 스타일이 지나치게 많아질 수 있습니다.
+
+
+4. React 18 버전 업데이트 내용에 대해 말씀해주세요.
+=> 
+
+
+5. Client Side Routing에 대해 설명해주세요.
+=> 페이지 전체를 로드하지 않고 URL이 변경될 떄 필요한 컴포넌트만 교체하여 빠르게 전환하는 방식입니다.
+=> React-Router를 통해 쉽게 구현할 수 있습니다.
+
+
+6. Next.js 를 사용해보셨나요?
+=> SSR, SSG, CSR를 손 쉽게 구현할 수 있는 프레임워크입니다.
+=> SEO, 파일 기반 라우팅, 파일 이름으로 다양한 page를 생성할 수 있습니다.
+
+
+7. React에서 Form 이벤트는 어떻게 제어하셨나요?
+=> 폼 제출 시 버튼 click event를 통해 이벤트 객체를 받고 기본 동작을 막습니다.
+=> ref나 state를 통해 input 값을 가져옵니다.
+=> 이를 통해 http 통신이나 상태 변경을 일으킵니다.
+
+
+
+8. 기억나는 Hook에 대해 전부 설명해주세요.
+=> useState, useEffect(컴포넌트가 마운트 된 후 부수효과), useRef, useReducer, useMemo, useCallback, useMemo
+=> useContext, useId, useLayoutEffect(변경된 상태가 그려지기 전에)
+
+
+9. React에서 컴포넌트 A가 사용하는 CSS파일과 컴포넌트 B가 사용하는 CSS파일의 선택자가 겹치는 이유가 뭘까요?
+=> CSS 파일이 전역적으로 적용되기 때문입니다.
+=> 두 개의 컴포넌트가 사용하는 CSS 파일에서 선택자 이름이 겹치면 원치 않은 스타일링이 될 수 있습니다.
+=> CSS Module을 사용하거나 Styled-compoment 같은 라이브러리를 사용하여 컴포넌트 내 스코프를 고정할 수 있습니다.
