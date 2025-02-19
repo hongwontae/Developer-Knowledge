@@ -11,6 +11,7 @@
 => 특정 상태에 있는 요소를 스타일링할 떄 사용됩니다.
 => 예를 들어, :hover(요소 위에 마우스를 올렸을 떄), :nth-child(n)(n번쨰 자식 요소)
 
+
 3. BOX-MODEL이란?
 => HTML 요소의 공간 구성 방식입니다.
 => Content, Padding, Border, Marin으로 구성되어 있습니다.

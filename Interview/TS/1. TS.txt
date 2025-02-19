@@ -1,0 +1,29 @@
+1. TS란?
+=> JavaScript에 정적 타입을 추가한 언어입니다.
+=> 컴파일 타임에 타입 검사를 수행하여 런타임 오류를 줄일 수 있습니다.
+
+
+2. TS 타입
+=> number, string, boolean, array, enum, any, unknown, void, never, null
+=> interface, type를 통해 객체 타입
+=> 함수 타입
+
+
+3. any vs unknown
+=> any는 타입 검사를 우회하고 unknown은 런타임에 타입 검사를 해야 합니다.
+
+
+4. 제네릭
+=> 타입을 매개변수로 받아 타입의 재사용성을 늘리는 방식입니다.
+
+
+5. never 타입
+=> 무한 루프, 예외를 던지는 함수에서 사용합니다.
+
+
+6. 타입 가드
+=> 런타임에 특정 타입을 확인하고, 코드의 타입을 좁히는 방법입니다.
+
+
+7. strict mode
+=> null, undefined 검사, any 사용 제한, 타입 추론 강화...
