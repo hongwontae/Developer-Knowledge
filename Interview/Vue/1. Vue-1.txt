@@ -1,0 +1,23 @@
+1. Vue3는 Proxy를 통해 상태변화를 감지하고 필요한 부분만 변경합니다.
+=> reactive는 JS의 proxy 객체를 사용하여 모든 객체에 대한 접근, 변경을 가로채서 동작합니다.
+=> 원시값은 Proxy 처리가 어렵기 떄문에 value key를 통해 객체를 생성한 후 반응형으로 동작하게 만듭니다.
+
+
+2. Vue2는 Object.defineProperty()를 사용해서 상태변화를 감지하고 변경했습니다.
+=> 배열 인덱스 직접 수정하는 경우 반영의 어렵습니다.
+=> 새로운 속성을 추가했을 떄 반응형으로 동작하지 않았습니다.
+
+
+3. case
+=> 템플릿 속성은 케밥 케이스
+=> JS 카멜 케이스
+
+
+4. vue2는 options API만 존재했고, Vue3에서 Composition API가 등장했습니다.
+=> options API는 .vue 파일에 <script> 내부에서 exprot default {}를 정의하고 내부에 data, methods, computed,
+watch 등 메서드나 객체를 사용해서 구현했습니다.
+
+=> composition API는 setup 메서드를 호출하여 내부에 ref, reacive로 반응형 데이터,
+ methods, computed를 정의했습니다.
+
+=> 컴포지션 API는 여러 가지 옵션이 떨어져 있지 않아서 효율성과 가독성이 좋아졌습니다.
