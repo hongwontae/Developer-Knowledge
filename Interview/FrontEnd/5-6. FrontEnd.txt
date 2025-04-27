@@ -22,4 +22,4 @@ React => 함수형 컴포넌트에서는 this를 사용하지 않고 useState, u
 
 1-6. 이벤트 위임의 차이점
 JS => 직접 구현
-React => 모든 이벤트가 document에서 캡쳐링, 버블링 처리됩니다./
+React => 모든 이벤트가 document에서 캡쳐링, 버블링 처리됩니다.
