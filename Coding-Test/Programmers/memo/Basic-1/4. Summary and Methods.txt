@@ -1,0 +1,17 @@
+1. str.includes('str')
+=> 해당 문자열에 인자 값이 존재 여부에 따라 boolean
+
+2. const arr = str.split('arg')
+=> 문자열에 arg를 기준을 나눠서 배열에 넣음
+
+3. str.repeat(number)
+=> str의 number 만큼 반복함
+
+4. arr.slice(start, end)
+=> arr의 배열에서 start 인덱스부터 end 인덱스까지 슬라이스한다.
+=> 이 떄 start 인덱스 요소는 포함하고 end 인덱스 요소는 포함하지 않는다.
+
+5. arr.filter(()=>...)
+=> 요소를 loop하는데 본문의 결과가 true라면 추가하고 아니라면 제거한다.
+=> arr.filter(ele => ele>10), ele가 10보다 작으면 추가하고 아니면 제거한다.
+=> 굳이 요소를 반환할 필요 x

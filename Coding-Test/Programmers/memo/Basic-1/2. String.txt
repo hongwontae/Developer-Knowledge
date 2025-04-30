@@ -1,0 +1,12 @@
+1. const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+=> rl.on('line', callback): 사용자가 입력 후 Enter를 누르면 callback 함수가 호출됨
+=> rl.on('close', callback): 입력이 완전히 끝났을 때 실행할 로직이 있으면 여기에 넣음
+=> rl.close(): 더 이상 입력을 안 받겠다는 뜻 (프로그램 종료 준비)
+
+
+2. var, let, const에서 초기화 작업을 하지 않으면 자동적으로 undefined가 할당된다.
+=> 그래서 += 작업할 떄 처음에 undefined가 붙어서 원치 않는 값이 나타날 수 도 있다.
