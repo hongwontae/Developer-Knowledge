@@ -1,17 +1,30 @@
-function solution(n){
-    let cal = 0;
+function solution(num_list) {
+    const a = num_list.reduce((acc, cur, idx, arr)=>{
+        return acc*cur
+    }, 1)
+    const b = num_list.reduce((acc, cur, idx, arr)=>{
+        return acc+cur
+    }, 0)
 
-    if(n%2 === 0){
-        console.log('???')
-        for(let i=n; i>0; i-=2){
-            cal += i*i
-        }
+    if(a > b*b){
+        return 0
     } else {
-        cal='sum'
+        return 1
     }
-
-    return cal;
-
 }
 
-console.log(solution(10))
+console.log(solution([5, 7, 8, 3]))
+
+
+function solution2(str, n){
+    return str.repeat(n)
+}
+
+console.log(solution2('Hello-world ', 9))
+
+
+function solution3(n){
+    console.log(Math.abs(n)%2 === 0)
+}
+
+solution3(-10)
